@@ -58,6 +58,7 @@ const ContactForm = ({ addUserContact, contacts }) => {
           id="standard-basic"
           label="Name"
           name="name"
+          type='text'
           value={formContact.name}
           onChange={handleChange}
         />
@@ -65,6 +66,7 @@ const ContactForm = ({ addUserContact, contacts }) => {
           id="standard-basic"
           label="Number"
           name="number"
+          type='number'
           value={formContact.number}
           onChange={handleChange}
         />
