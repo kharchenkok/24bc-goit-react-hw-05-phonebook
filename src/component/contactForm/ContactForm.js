@@ -23,7 +23,7 @@ const ContactForm = ({ addUserContact, contacts }) => {
     const { name, number } = formContact;
     e.preventDefault();
 
-    if (name.length === 0) {
+    if (name.length === 0 || number.length === 0) {
       setAlertEmpty(true);
       setTimeout(() => setAlertEmpty(false), 1500);
       return;
@@ -46,7 +46,10 @@ const ContactForm = ({ addUserContact, contacts }) => {
 
   return (
     <>
-      <EmptyNameAlert alert={alertEmpty} />
+      <EmptyNameAlert
+        alert={alertEmpty}
+        field={formContact.name.length ? "Number" : "Name"}
+      />
       <ExsistNameAlert alert={alertExists} />
       <form
         className={style.form__style}
@@ -61,14 +64,19 @@ const ContactForm = ({ addUserContact, contacts }) => {
           type="text"
           value={formContact.name}
           onChange={handleChange}
+          required
         />
+       
         <TextField
           id="standard-basic"
           label="Number"
           name="number"
-          type="number"
+          type="tel"
           value={formContact.number}
           onChange={handleChange}
+          placeholder="38-0XX-XXX-XX-XX"
+          pattern="[0-9]{2}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+          required
         />
         <Button
           variant="contained"

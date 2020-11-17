@@ -4,10 +4,10 @@ import Styles from "./AlertStyles.module.css";
 
 export default class EmptyNameAlert extends Component {
   render() {
-    const { alert } = this.props;
+    const { alert,field } = this.props;
     return (
       <CSSTransition in={alert} classNames={Styles} timeout={250} unmountOnExit>
-        <div className={Styles.alert}>Name is empty! Enter contact name</div>
+        <div className={Styles.alert}>{field} is empty! Enter this field</div>
       </CSSTransition>
     );
   }
