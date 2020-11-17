@@ -1,0 +1,28 @@
+.phonebook_wrapper {
+  max-width: 550px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: whitesmoke;
+}
+.phonebook_title {
+  color: darkslateblue;
+  font-weight: 800;
+  font-size: 35px;
+  text-decoration: underline;
+  text-align: center;
+}
+.phonebook_titleContact {
+  color: darkslateblue;
+  font-weight: 800;
+  font-size: 28px;
+  text-decoration: underline;
+}
+
+.appear {
+  transform: translateX(-100%);
+}
+
+.appearActive {
+  transform: translateX(0);
+  transition: all 500ms linear;
+}

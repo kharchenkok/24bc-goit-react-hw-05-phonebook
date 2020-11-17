@@ -1,0 +1,25 @@
+/* .addbtn__style {
+  border-radius: 5px; 
+  margin-right: 10px;
+  border: 2px solid rgb(133, 15, 70);
+  line-height: 2;
+  height: 35px;
+  background-color: rgb(133, 15, 70);
+  color: white;
+  font-weight: 700;
+} */
+
+/* .addbtn__style:hover {
+  color: rgb(133, 15, 70);
+  background-color: rgb(117, 31, 31);
+} */
+
+.form__style {
+  padding-top: 10px;
+}
+/* .input__style {
+  border: 2px solid rgb(133, 15, 70);
+  height: 30px;
+  margin-right: 10px;
+  color:red;
+} */

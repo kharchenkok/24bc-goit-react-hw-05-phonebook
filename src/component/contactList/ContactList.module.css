@@ -1,0 +1,51 @@
+.contact__list {
+  max-width: 400px;
+
+  padding: 0;
+}
+.contact__style {
+  width: 120px;
+  line-height: 2;
+  margin: 0;
+  font-weight: 600;
+  font-style: italic;
+}
+
+.contact__item {
+  font-size: 15px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 5px;
+  border-bottom: 2px groove rgb(177, 169, 169);
+  padding-bottom: 5px;
+}
+
+/* .deletebtn__style {
+  border-radius: 5px;
+  margin-right: 10px;
+  border: 2px solid rgb(133, 15, 70);
+  color: white;
+  background-color: rgb(133, 15, 70);
+} */
+
+.enter {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+
+.enterActive {
+  opacity: 1;
+  transform: translateX(0);
+  transition: all 250ms linear;
+}
+.exit {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.exitActive {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: all 250ms linear;
+}
