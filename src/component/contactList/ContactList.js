@@ -8,10 +8,10 @@ import { CSSTransition, TransitionGroup } from "react-transition-group";
 const ContactList = ({ findUserContact, deleteUserContact }) => {
   return (
     <TransitionGroup component="ul" className={style.contact__list}>
-      {findUserContact().map((elem, index) => (
+      {findUserContact.map((elem, index) => (
         <CSSTransition
           key={elem.id}
-          in={findUserContact().length > 0}
+          in={findUserContact.length > 0}
           timeout={250}
           classNames={style}
         >

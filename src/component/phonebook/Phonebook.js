@@ -50,9 +50,9 @@ const Phonebook = () => {
       <ContactForm addUserContact={addUserContact} contacts={contacts} />
 
       <h2 className={style.phonebook_titleContact}>Contacts</h2>
-      {contacts.length > 1 && <Filter userFilter={userFilter} />}
+      {contacts.length > 1 && <Filter userFilter={userFilter} filter={filter} />}
       <ContactList
-        findUserContact={findUserContact}
+        findUserContact={(contacts.length>1)? (findUserContact()) : (contacts)}
         deleteUserContact={deleteUserContact}
       />
     </div>

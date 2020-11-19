@@ -3,7 +3,7 @@ import style from "./Filter.module.css";
 import PropTypes from "prop-types";
 import { TextField } from "@material-ui/core";
 
-const Filter = ({ userFilter }) => {
+const Filter = ({ userFilter,filter }) => {
   const handleFilter = ({ target }) => {
     // console.log(target.value);
     userFilter(target.value);
@@ -18,6 +18,7 @@ const Filter = ({ userFilter }) => {
         label="Enter contact name:"
         variant="filled"
         onChange={handleFilter}
+        value={filter}
       />
     </form>
   );
